@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    margin:0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    background-color: rgb(8, 24, 37);
+  }
+  body::before{
+      content: "";
+      background: linear-gradient(#f00,rgb(206, 16, 174));
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      clip-path: circle(20% at 98% 75%);
+  }
+  body::after{
+    content: "";
+    background: linear-gradient(rgb(0, 255, 255),rgb(236, 10, 115));
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    clip-path: circle(20% at left 15%);
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    width: 330px;
+    height: 200px;
+    box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+    justify-content: space-between;
+    border-radius: 9px;
+    background: rgba(255,255,255,0.1);
+    overflow: hidden;
+    border-top: 1px solid rgba(255,255,255,0.4);
+    border-left: 1px solid rgba(255,255,255,0.4);
+    padding: 10px 20px;
+    backdrop-filter: blur(6px);
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    cursor: pointer;
+    margin: 15px;
+
+}
+.name , .number{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #000000;
+}
+.bank-icon, .visa{
+    width: 35px;
+    transform: translateZ(20px)
+}
